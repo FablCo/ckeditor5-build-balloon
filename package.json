@@ -1,6 +1,6 @@
 {
   "name": "fabl-ckeditor5-build-balloon",
-  "version": "12.1.1",
+  "version": "12.1.2",
   "description": "Fabl version of the balloon editor build of CKEditor 5.",
   "keywords": [
     "wysiwyg",
