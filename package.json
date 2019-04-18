@@ -1,7 +1,7 @@
 {
-  "name": "@ckeditor/ckeditor5-build-balloon",
+  "name": "fabl-ckeditor5-build-balloon",
   "version": "12.1.0",
-  "description": "The balloon editor build of CKEditor 5 – the best browser-based rich text editor.",
+  "description": "Fabl version of the balloon editor build of CKEditor 5.",
   "keywords": [
     "wysiwyg",
     "rich text",
