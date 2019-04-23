@@ -34,10 +34,17 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
+import GFMDataProcessor from '@ckeditor/ckeditor5-markdown-gfm/src/gfmdataprocessor';
+// Simple plugin which loads the data processor.
+function Markdown( editor ) {
+	editor.data.processor = new GFMDataProcessor();
+}
+
 export default class BalloonEditor extends BalloonEditorBase {}
 
 // Plugins to include in the build.
 BalloonEditor.builtinPlugins = [
+	Markdown,
 	Essentials,
 	UploadAdapter,
 	Autoformat,
