@@ -73,7 +73,6 @@ BalloonEditor.builtinPlugins = [
 BalloonEditor.defaultConfig = {
 	toolbar: {
 		items: [
-			'removeFormat',
 			'heading',
 			'|',
 			'bold',
