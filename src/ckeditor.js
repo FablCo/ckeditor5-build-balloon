@@ -33,6 +33,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
@@ -64,13 +65,15 @@ BalloonEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	Font,
-	Alignment
+	Alignment,
+	RemoveFormat,
 ];
 
 // Editor configuration.
 BalloonEditor.defaultConfig = {
 	toolbar: {
 		items: [
+			'removeFormat',
 			'heading',
 			'|',
 			'bold',
