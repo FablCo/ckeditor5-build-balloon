@@ -24,7 +24,6 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
@@ -34,11 +33,13 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import Link from '../vendors/ckeditor5-link/src/link';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
 // Plugins to include in the build.
 BalloonEditor.builtinPlugins = [
+	RemoveFormat,
 	Essentials,
 	UploadAdapter,
 	Autoformat,
@@ -66,32 +67,31 @@ BalloonEditor.builtinPlugins = [
 	TableToolbar,
 	Font,
 	Alignment,
-	RemoveFormat,
 ];
 
 // Editor configuration.
 BalloonEditor.defaultConfig = {
+	fontSize: { options: [ 48, 36, 24, 20, 16, 14, 12, 10, 9, 'default' ] },
+	alignment: { options: [ 'left', 'right', 'center', 'justify' ] },
 	toolbar: {
 		items: [
-			'heading',
-			'|',
-			'bold',
-			'italic',
-			'underline',
-			'strikethrough',
-			'subscript',
-			'superscript',
-			'link',
-			'fontFamily',
-			'fontSize',
-			'fontColor',
-			'alignment:left',
-			'alignment:right',
-			'alignment:center',
-			'alignment:justify',
-			'bulletedList',
-			'numberedList',
-			'blockQuote'
+			'removeFormat', 'heading', '|', 'bold', 'italic', 'underline', 'subscript', 'superscript', 'link',
+			'undo', 'redo', 'fontColor', '|',
+			'alignment', 'bulletedList', 'numberedList', 'blockQuote'
+		]
+	},
+	link: {
+		// Automatically add target="_blank" and rel="noopener noreferrer" to all external links.
+		// addTargetToExternalLinks: true,
+		// Allow users control the "downloadable" attribute of each link.
+		decorators: [
+			{
+				mode: 'manual',
+				label: 'Open in new window',
+				attributes: {
+					target: '_blank'
+				}
+			}
 		]
 	},
 	image: {
