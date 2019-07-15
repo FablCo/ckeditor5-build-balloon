@@ -154,8 +154,10 @@ export default class LinkUI extends Plugin {
 
 		// Execute link command after clicking the "Save" button.
 		this.listenTo( formView, 'submit', () => {
-			editor.execute( 'link', addMailtoIfEmail( formView.urlInputView.inputView.element.value ),
-				formView.getDecoratorSwitchesState() );
+			editor.execute( 'link',
+				addMailtoIfEmail( formView.urlInputView.inputView.element.value ),
+				formView.getDecoratorSwitchesState()
+			);
 			this._closeFormView();
 		} );
 

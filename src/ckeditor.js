@@ -91,6 +91,13 @@ BalloonEditor.defaultConfig = {
 				attributes: {
 					target: '_blank'
 				}
+			},
+			{
+				mode: 'automatic',
+				callback: () => true,
+				attributes: {
+					class: 'theme-style-link',
+				}
 			}
 		]
 	},
