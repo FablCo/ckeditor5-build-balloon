@@ -22,7 +22,6 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
@@ -34,6 +33,7 @@ import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import Link from '../vendors/ckeditor5-link/src/link';
 import Essentials from '../vendors/ckeditor5-essentials/src/essentials';
 import Heading from '../vendors/ckeditor5-heading/src/heading';
+import List from '../vendors/ckeditor5-list/src/list';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 

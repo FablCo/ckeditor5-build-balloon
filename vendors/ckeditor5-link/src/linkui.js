@@ -231,7 +231,7 @@ export default class LinkUI extends Plugin {
 
 			if ( parentLink ) {
 				// Then show panel but keep focus inside editor editable.
-				this._showUI();
+				//this._showUI();
 			}
 		} );
 
