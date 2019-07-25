@@ -27,13 +27,13 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
-import Font from '@ckeditor/ckeditor5-font/src/font';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import Link from '../vendors/ckeditor5-link/src/link';
 import Essentials from '../vendors/ckeditor5-essentials/src/essentials';
 import Heading from '../vendors/ckeditor5-heading/src/heading';
 import List from '../vendors/ckeditor5-list/src/list';
+import Font from '../vendors/ckeditor5-font/src/font';
 
 export default class BalloonEditor extends BalloonEditorBase {}
 
